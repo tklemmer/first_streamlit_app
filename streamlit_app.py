@@ -51,6 +51,6 @@ streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_rows)
 
 add_my_fruit = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
-fruits_to_show = my_fruit_list.loc[add_my_fruit]
+fruits_to_show2 = my_fruit_list.loc[add_my_fruit]
 
-streamlit.write('You want to learn more about ', fruit_to_show)
+streamlit.dataframe(fruit_to_show2)
