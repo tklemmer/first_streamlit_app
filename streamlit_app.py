@@ -50,7 +50,5 @@ my_data_rows = my_cur.fetchall()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_rows)
 
-add_my_fruit = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
-fruits_to_show2 = my_fruit_list.loc[add_my_fruit]
-
-streamlit.dataframe(fruit_to_show2)
+add_my_fruit = streamlit.text_input('What fruit would you like information about?','')
+streamlit.write('Thanks for adding ', add_my_fruit)
